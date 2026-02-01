@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Tia ❤️</title>
+    <style>
+        body { text-align: center; font-family: 'Arial', sans-serif; background-color: #f2e8d9; padding-top: 50px; overflow-x: hidden; }
+        .container { background: white; padding: 40px; border-radius: 30px; display: inline-block; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { color: #5d4037; font-size: 24px; }
+        button { font-size: 18px; padding: 12px 25px; margin: 15px; border-radius: 50px; border: none; cursor: pointer; transition: 0.2s; }
+        #yesBtn { background-color: #ff4d6d; color: white; font-weight: bold; }
+        #noBtn { background-color: #adb5bd; color: white; position: absolute; z-index: 999; }
+        .main-img { border-radius: 20px; margin-bottom: 20px; max-width: 300px; }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <img id="introImg" class="main-img" src="https://media0.giphy.com/media/Bz9LaPMyQmXC161oZJ/giphy.gif" width="250">
+        
+        <h1 id="question">Tia, will you be my Valentine? ❤️</h1>
+        
+        <button id="yesBtn" onclick="celebrate()">Yes</button>
+        <button id="noBtn" onmouseover="moveButton()">No</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            const btn = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+
+        function celebrate() {
+            const container = document.getElementById('mainContainer');
+            container.innerHTML = `
+                <h1 style="color: #ff4d6d;">YESS!Glad you chose this option love. We're locked in. See you soon! 😍</h1>
+                <img src="https://media4.giphy.com/media/iygxcDh6S4R28ItCkS/giphy.gif" width="300" style="border-radius: 20px;">
+            `;
+        }
+    </script>
+</body>
+</html>
